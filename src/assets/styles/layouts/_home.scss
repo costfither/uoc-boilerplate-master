@@ -1,0 +1,165 @@
+/**
+* Global actions
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+}
+
+.uoc-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.uoc-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  max-width: 200px;
+  height: auto;
+
+  @media (min-width: $mqMinWidth) {
+    max-width: 350px;
+  }
+}
+
+.uoc-title {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  color: $uoc-corporate;
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
+ul li {
+  list-style-type: none;
+  padding: 5px 0px 5px 0px;
+}
+
+div {
+  text-align: center;
+  align-items: center;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+}
+td {
+  padding: 10px 0px 10px 0px;
+}
+/**
+* Button navigation
+*/
+.btn-grey {
+  background-color: #696969;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/**
+* Seccions principals del CV
+*/
+.main.section {
+  border-top: $uoc-corporate 2px solid;
+}
+/**
+* Seccions secondaries
+*/
+.second.section {
+  border-top: $uoc-corporate 2px dashed;
+}
+.img {
+  grid-area: img;
+}
+.labelname {
+  grid-area: labelname;
+}
+.name {
+  grid-area: name;
+}
+.labeldirection {
+  grid-area: labeldirection;
+}
+.direction {
+  grid-area: direction;
+}
+.labelmobil {
+  grid-area: labelmobil;
+}
+.mobil {
+  grid-area: mobil;
+}
+.labelphone {
+  grid-area: labelphone;
+}
+.phone {
+  grid-area: phone;
+}
+.labelemail {
+  grid-area: labelemail;
+}
+.email {
+  grid-area: email;
+}
+.grid-container > div {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "img labelname name"
+    "img labeldirection direction"
+    "img labelmobil mobil"
+    "img labelphone phone"
+    "img labelemail email";
+}
+
+/**
+* For Mobile
+*/
+@media screen and (max-width: 540px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "img img"
+      "labelname name"
+      "labeldirection direction"
+      "labelmobil mobil"
+      "labelphone phone"
+      "labelemail email";
+  }
+}
